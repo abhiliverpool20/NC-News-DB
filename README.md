@@ -1,8 +1,7 @@
 
 # **NC News API**
 
-A RESTful backend service created to support a Reddit-style news application. It exposes endpoints that allow clients to fetch topics, articles, users, and comments, as well as create, update, and delete comment and vote data.  
-The project is built using **Node.js**, **Express**, and **PostgreSQL**, with deployment handled through **Render**.
+A RESTful backend service created to support a Reddit-style news application. It exposes endpoints that allow clients to fetch topics, articles, users, and comments, as well as create, update, and delete comment and vote data. The project is built using **Node.js**, **Express**, and **PostgreSQL**, with deployment handled through **Render**.
 
 ---
 
