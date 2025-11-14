@@ -1,6 +1,4 @@
----
 
-```md
 # **NC News API**
 
 A RESTful backend service created to support a Reddit-style news application. It exposes endpoints that allow clients to fetch topics, articles, users, and comments, as well as create, update, and delete comment and vote data.  
@@ -56,79 +54,3 @@ The test suite is written using **Jest** and **Supertest**, ensuring reliable en
 ```bash
 git clone https://github.com/abhiliverpool20/NC-News-DB.git
 cd NC-News-DB
-2. Install dependencies
-bash
-Copy code
-npm install
-🔑 Environment Variables
-Create the following environment files in the project root:
-
-.env.development
-ini
-Copy code
-PGDATABASE=nc_news
-.env.test
-ini
-Copy code
-PGDATABASE=nc_news_test
-✔️ Ensure these files are listed in .gitignore
-
-🗄️ Database Setup
-1. Create local databases
-bash
-Copy code
-npm run setup-dbs
-2. Seed the development database
-bash
-Copy code
-npm run seed
-🧪 Testing
-Run all test suites:
-
-bash
-Copy code
-npm test
-Run seed-only tests:
-
-bash
-Copy code
-npm run test-seed
-🌍 Production Hosting
-Hosting stack:
-
-Backend: Render
-
-Database: PostgreSQL
-
-To seed the production database:
-
-bash
-Copy code
-npm run seed-prod
-🚀 Run the Server Locally
-bash
-Copy code
-npm start
-The server will run at:
-
-👉 http://localhost:9090/api
-
-📚 API Endpoints
-Method	Endpoint	Description
-GET	/api	Returns a list of all available endpoints
-GET	/api/topics	Fetch all topics
-GET	/api/articles	Retrieve all articles (sorting & filtering supported)
-GET	/api/articles/:article_id	Get a specific article including comment_count
-GET	/api/articles/:article_id/comments	Retrieve comments for an article
-POST	/api/articles/:article_id/comments	Post a new comment
-PATCH	/api/articles/:article_id	Update an article’s vote count
-DELETE	/api/comments/:comment_id	Delete a comment
-
-🧑‍💻 Author
-Developed by Abhishek Sharma
-GitHub: https://github.com/abhiliverpool20
-
-yaml
-Copy code
-
----
