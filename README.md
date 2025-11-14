@@ -54,3 +54,102 @@ The test suite is written using **Jest** and **Supertest**, ensuring reliable en
 ```bash
 git clone https://github.com/abhiliverpool20/NC-News-DB.git
 cd NC-News-DB
+```
+### **2. Install dependencies**
+```bash
+npm install
+```
+
+---
+
+## 🔑 **Environment Variables**
+
+Create the following environment files in the project root:
+
+### **.env.development**
+```
+PGDATABASE=nc_news
+```
+
+### **.env.test**
+```
+PGDATABASE=nc_news_test
+```
+
+✔️ Ensure these files are listed in **.gitignore**
+
+---
+
+## 🗄️ **Database Setup**
+
+### **1. Create local databases**
+```bash
+npm run setup-dbs
+```
+
+### **2. Seed the development database**
+```bash
+npm run seed
+```
+
+---
+
+## 🧪 **Testing**
+
+Run all test suites:
+```bash
+npm test
+```
+
+Run seed-only tests:
+```bash
+npm run test-seed
+```
+
+---
+
+## 🌍 **Production Hosting**
+
+Hosting stack:
+
+- Backend: **Render**
+- Database: **PostgreSQL**
+
+To seed the production database:
+```bash
+npm run seed-prod
+```
+
+---
+
+## 🚀 **Run the Server Locally**
+```bash
+npm start
+```
+
+The server will run at:
+
+👉 **http://localhost:9090/api**
+
+---
+
+## 📚 **API Endpoints**
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api | Returns a list of all available endpoints |
+| GET | /api/topics | Fetch all topics |
+| GET | /api/articles | Retrieve all articles (sorting & filtering supported) |
+| GET | /api/articles/:article_id | Get a specific article including `comment_count` |
+| GET | /api/articles/:article_id/comments | Retrieve comments for an article |
+| POST | /api/articles/:article_id/comments | Post a new comment |
+| PATCH | /api/articles/:article_id | Update an article’s vote count |
+| DELETE | /api/comments/:comment_id | Delete a comment |
+
+---
+
+## 🧑‍💻 **Author**
+
+Developed by **Abhishek Sharma**  
+GitHub: https://github.com/abhiliverpool20
+
