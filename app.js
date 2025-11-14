@@ -14,9 +14,13 @@ const {
 } = require("./controllers/comments.controller");
 //
 
+const path = require("path");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use("/api", express.static(path.join(__dirname, "public")));
 
 app.get("/api/topics", getTopics);
 app.get("/api/articles", getArticles);
